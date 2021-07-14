@@ -4,3 +4,4 @@
 .Ruserdata
 #R studio file
 *.Rproj
+*.nb.html

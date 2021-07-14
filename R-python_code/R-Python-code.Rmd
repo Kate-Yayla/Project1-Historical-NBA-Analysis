@@ -21,9 +21,10 @@ import matplotlib as plt
 ```{python}
 "import data sets"
 
-team_Data = pd.read_csv("Resources/teamData.csv")
-player_Data = pd.read_csv("Resources/playerData.csv")
-crossReference_Data = pd.read_csv("Resources/crossReference.csv")
+team_Data = pd.read_csv("../Resources/teamData.csv")
+player_Data = pd.read_csv("../Resources/playerData.csv")
+crossReference_Data = pd.read_csv("../Resources/crossReference.csv")
+
 ```
 
 ```{python}
