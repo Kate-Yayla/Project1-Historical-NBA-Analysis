@@ -1,0 +1,141 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+```{r}
+"Import reticulate to work between R and python"
+
+library(reticulate)
+use_virtualenv("r-reticulate")
+py_available(TRUE)
+```
+
+
+```{python}
+"import dependencies"
+import math
+import pandas as pd
+import matplotlib as plt
+```
+
+```{python}
+"import data sets"
+
+team_Data = pd.read_csv("Resources/teamData.csv")
+player_Data = pd.read_csv("Resources/playerData.csv")
+crossReference_Data = pd.read_csv("Resources/crossReference.csv")
+```
+
+```{python}
+"merge data"
+
+player_Data['Year'].dtypes
+```
+
+
+```{python}
+"merge data"
+
+team_Data['Year'].dtypes
+```
+
+```{python}
+"to get data from 1986 to 2018"
+
+merged_player_data = player_Data.loc[(player_Data['Year'] >= 1986) & (player_Data['Year'] < 2018)]
+```
+
+```{r}
+"a list of varibles to intergrate into the regression"
+
+"dependent varible: minutes played"
+"independent varibles: 
+  PER (player efficiency) 
+  TS (true shooting %) 
+  ORB (offensive rebound rate) 
+  DRB (defensive rebound rate)
+  AST (assist %)
+  STL (steal %)
+  BLK (Block %)
+  TOV (turnover %)
+  WS (win shares)
+  3P% (3-Point %)
+  2P% (2-point field goal %)
+  FT% (Free throw %)
+  PTS (points)"
+
+
+```
+
+
+```{python}
+"rename varibles in python"
+player_eff = merged_player_data['PER']
+true_shot_perc = merged_player_data['TS%']
+off_reb_rate = merged_player_data['ORB%']
+def_reb_rate = merged_player_data['DRB%']
+assist_perc = merged_player_data['AST%']
+steal_perc = merged_player_data['STL%']
+block_perc = merged_player_data['BLK%']
+turnover_perc = merged_player_data['TOV%']
+win_shares = merged_player_data['WS']
+three_point_perc = merged_player_data['3P%']
+two_point_perc = merged_player_data['2P%']
+free_throw_perc = merged_player_data['FT%']
+points = merged_player_data['PTS']
+minutes_played = merged_player_data['MP']
+```
+```{r}
+ln_minutes_played <- log(py$minutes_played)
+summary(ln_minutes_played)
+
+```
+
+```{python}
+
+```
+
+```{r}
+"regression"
+main_reg <- lm(ln_minutes_played ~ py$player_eff + py$true_shot_perc + py$off_reb_rate + py$def_reb_rate + py$assist_perc + py$steal_perc + py$block_perc + py$turnover_perc + py$win_shares + py$three_point_perc + py$two_point_perc + py$free_throw_perc + py$points)
+options(max.print = 1000000)
+options(scipen=999)
+summary(main_reg)
+
+
+```
+
+```{r}
+summary(ln_minutes_played)
+```
+
+
+```{r}
+
+"a list of varibles to intergrate into the regression"
+"dependent varible: minutes played"
+"independent varibles: 
+  PER (player efficiency) 
+  TS (true shooting %) 
+  ORB (offensive rebound rate) 
+  DRB (defensive rebound rate)
+  AST (assist %)
+  STL (steal %)
+  BLK (Block %)
+  TOV (turnover %)
+  WS (win shares)
+  3P% (3-Point %)
+  2P% (2-point field goal %)
+  FT% (Free throw %)
+  PTS (points)"
+
+
+```
+
+
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
