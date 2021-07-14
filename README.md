@@ -21,7 +21,7 @@
 
 Project Proposal: How well can you predict the results of the games in the NBA using their data alone?
 
-### Questions:
+### Questions
 
 1. Can the Team Four Factor Rating of Basketball help in accurately determining the team’s win/success? Four Factors are:
     * Shooting – Effective Field Goal
