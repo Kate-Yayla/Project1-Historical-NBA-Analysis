@@ -15,7 +15,6 @@
 * [Reports](#reports)
 * [Setup](#setup)
 * [Team](#team)
-  
 ****
 
 ## **General info**
@@ -42,4 +41,4 @@ Project Proposal: How well can you predict the results of the games in the NBA u
 )  
 * Team Data:  (https://data.world/gmoney/nba-team-records-by-year/workspace/file?filename=Historical+NBA+Performance.xlsx
 )  
-Notes: Limiting our sample to the years of 2007-2017.
+Notes: Limiting our sample to the years of 1986-2017.
