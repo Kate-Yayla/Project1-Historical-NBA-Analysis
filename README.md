@@ -1,7 +1,7 @@
 # The Winning Factors
 
 
-![NBA Court](../Project1-NBA/Images/basketballcourt.png)
+![NBA Court](/Images/basketballcourt.png)
 
 ## Table of content
 
