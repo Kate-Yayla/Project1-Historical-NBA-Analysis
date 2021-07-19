@@ -1,0 +1,246 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+```{r}
+"Import reticulate to work between R and python as well as other packages"
+
+library(reticulate)
+use_virtualenv("r-reticulate")
+py_available(TRUE)
+
+
+```
+
+
+```{python}
+"import dependencies"
+import math
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+from matplotlib import colors
+from matplotlib.ticker import PercentFormatter
+```
+
+```{python}
+"import data sets"
+
+team_Data = pd.read_csv("../Resources/teamData.csv")
+player_Data = pd.read_csv("../Resources/playerData.csv")
+crossReference_Data = pd.read_csv("../Resources/crossReference.csv")
+
+```
+
+```{python}
+"merge data"
+
+player_Data['Year'].dtypes
+```
+
+
+```{python}
+"merge data"
+
+team_Data['Year'].dtypes
+```
+
+```{python}
+"to get data from 1986 to 2018"
+
+merged_player_data = player_Data.loc[(player_Data['Year'] >= 1986) & (player_Data['Year'] < 2018)]
+```
+
+```{r}
+"a list of varibles to intergrate into the regression"
+
+"dependent varible: minutes played"
+"independent varibles: 
+  PER (player efficiency) 
+  TS (true shooting %) 
+  ORB (offensive rebound rate) 
+  DRB (defensive rebound rate)
+  AST (assist %)
+  STL (steal %)
+  BLK (Block %)
+  TOV (turnover %)
+  WS (win shares)
+  3P% (3-Point %)
+  2P% (2-point field goal %)
+  FT% (Free throw %)
+  PTS (points)"
+
+
+```
+
+
+```{python}
+"rename varibles in python"
+player_eff = merged_player_data['PER']
+true_shot_perc = merged_player_data['TS%']
+off_reb_rate = merged_player_data['ORB%']
+def_reb_rate = merged_player_data['DRB%']
+assist_perc = merged_player_data['AST%']
+steal_perc = merged_player_data['STL%']
+block_perc = merged_player_data['BLK%']
+turnover_perc = merged_player_data['TOV%']
+win_shares = merged_player_data['WS']
+three_point_perc = merged_player_data['3P%']
+two_point_perc = merged_player_data['2P%']
+free_throw_perc = merged_player_data['FT%']
+points = merged_player_data['PTS']
+minutes_played = merged_player_data['MP']
+
+subsetpy = {'player_eff':[player_eff], 'Trueshot_percent': [true_shot_perc], 'off_reb_rate': [off_reb_rate], 'def_reb_rate': [def_reb_rate], 'assist_perc':[assist_perc],'steal_perc': [steal_perc], 'block_perc': [block_perc], 'turnover_perc':[turnover_perc], 'win_shares': [win_shares],'three_point_perc': [three_point_perc],'two_point_perc':[two_point_perc],'free_throw_perc':[free_throw_perc], 'points':[points], 'minutes_played':[minutes_played]}
+#subsetpy
+#regression_varibles_py_df = pd.DataFrame(subsetpy)
+#regression_varibles_py_df
+
+"To create subset with only regression varibles"
+selected_columns = ['Player', 'PER', 'TS%', 'ORB%', 'DRB%', 'AST%', 'STL%', 'BLK%', 'TOV%', 'WS', '3P%', '2P%', 'FT%', 'PTS', 'MP']
+subset2py = merged_player_data[selected_columns]
+subset2py2 = subset2py
+```
+
+
+
+```{python}
+Q1=subset2py2.quantile(0.25)
+Q3=subset2py2.quantile(0.75)
+IQR=Q3-Q1
+
+"To get rid of outliers in subset df"
+subset2py_no_outlier=subset2py2[~((subset2py2<(Q1-1.5*IQR)) | (subset2py2>(Q3+1.5*IQR)))]
+subset2py_no_outlier
+
+plt.hist(subset2py_no_outlier['TS%'], bins= 'auto', color='#0504aa', alpha=0.7, rwidth= 0.85)
+
+
+plt.grid(axis='y', alpha=0.75)
+plt.xlabel('True Shot %')
+plt.ylabel('Frequency')
+plt.title('My Very Own Histogram')
+plt.text(23, 45, r'$\mu=15, b=3$')
+
+
+```
+```{python}
+percentile_df = pd.DataFrame()
+for column in selected_columns[1:]:
+  #fileter by year
+  percentile_df[f"{column}_percentile"] = merged_player_data[column].rank(pct = True)
+  
+percentile_df['Player Name'] = merged_player_data['Player']
+percentile_df = percentile_df.dropna().reset_index()
+percentile_df
+
+
+```
+```{python}
+main_perc_list = []
+
+for index in range(0,percentile_df.shape[0]):
+  row_sum = sum(list(percentile_df.iloc[index])[0:-1])
+  row_main_perc = (row_sum/(percentile_df.shape[1]-1))
+  main_perc_list.append(row_main_perc)
+  
+  
+percentile_df['Main Percent'] = main_perc_list
+percentile_df
+
+```
+
+```{python}
+percentile_df.pylop
+```
+
+```{r}
+ln_minutes_played <- log(py$minutes_played)
+hist(py$subset2py_no_outlier$`TS%`)
+hist(py$merged_player_data$`TS%`)
+hist(py$subset2py$PER)
+count(py$subset2py_no_outlier$Player)
+```
+
+```{r}
+
+```
+
+```{r}
+"regression"
+main_reg <- lm(ln_minutes_played ~ py$player_eff + py$true_shot_perc + py$off_reb_rate + py$def_reb_rate + py$assist_perc + py$steal_perc + py$block_perc + py$turnover_perc + py$win_shares + py$three_point_perc + py$two_point_perc + py$free_throw_perc + py$points)
+options(max.print = 1000000)
+options(scipen=999)
+summary(main_reg)
+
+main_reg_no_outlier <- lm()
+
+
+```
+
+```{r}
+merged_player_data <- py$merged_player_data
+merged_player_data$ln_MP <- log(merged_player_data$MP)
+
+out2=with(merged_player_data, 
+          by(merged_player_data, merged_player_data$Year, function(merged_player_data) lm(merged_player_data$ln_MP ~ merged_player_data$PER + merged_player_data$`TS%` + merged_player_data$`ORB%` + merged_player_data$`DRB%` + merged_player_data$`AST%` + merged_player_data$`STL%` + merged_player_data$`BLK%` + merged_player_data$`TOV%` + merged_player_data$WS + merged_player_data$`3P%` + merged_player_data$`2P%` + merged_player_data$`FT%` + merged_player_data$PTS, data=merged_player_data)))
+
+
+out2[3]
+```
+
+
+```{r}
+outsum <- lapply(out2, summary)
+outsum[10]
+```
+
+
+```{r}
+subsetr <- merged_player_data
+
+```
+
+
+
+
+```{r}
+
+```
+
+
+```{r}
+lm(py$player_eff ~ py$minutes_played)
+plot(py$minutes_played, py$player_eff)
+```
+
+
+```{r}
+
+"a list of varibles to intergrate into the regression"
+"dependent varible: minutes played"
+"independent varibles: 
+  PER (player efficiency) 
+  TS (true shooting %) 
+  ORB (offensive rebound rate) 
+  DRB (defensive rebound rate)
+  AST (assist %)
+  STL (steal %)
+  BLK (Block %)
+  TOV (turnover %)
+  WS (win shares)
+  3P% (3-Point %)
+  2P% (2-point field goal %)
+  FT% (Free throw %)
+  PTS (points)"
+
+
+```
+
+
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
