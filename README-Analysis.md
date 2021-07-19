@@ -5,6 +5,7 @@
 ## Table of content
 * [General info](#general-info)
 * [Questions](#questions)
+* [Parameters](#Parameters)
 * [Data Sources](#data_sources)
     * [Preview](#preview)
 * [Data Cleaning](#Data_Cleaning)
@@ -48,10 +49,12 @@ In this project, we analyzed the NBA history with the parameters of players age,
 
 ## Data Sources
 * Four factors contribution to NBA Teams success
+
 (https://www.kaggle.com/drgilermo/nba-players-stats?select=Seasons_Stats.csv)
 (https://data.world/gmoney/nba-team-records-by-year/workspace/file?filename=Historical+NBA+Performance.xlsx)
   
 * Additional sources
+
 (https://www.sportsgamblingpodcast.com/2020/04/20/nba-most-valuable-statistic/)
 (https://pypi.org/project/nba-api/)
   
@@ -59,7 +62,7 @@ Notes: Limiting our project between 1986-2017.
 
 ### Preview of the NBA data set
 
-![alt text](Images/playerData.png)
+![alt text](/Images/playerData.png)
 
 
 ## Data Cleaning
@@ -81,7 +84,7 @@ Notes: Limiting our project between 1986-2017.
 #### Visualized four factors ratings impacts on winning percentage.
 <table>
   <tr>
-    <td><img src="Images/Impact-Four-Factor-Ratings-on-Winning-Percentage.png" width=300></td>
+    <td><img src="Images/Impact-Four-Factor-Ratings-on-Winning-Percentage.png" width=270></td>
   </tr>
 </table>  
 
@@ -90,7 +93,7 @@ Notes: Limiting our project between 1986-2017.
 #### Visualized ages impacts on Player Efficiency Rating(PER) 
 <table>
   <tr>
-    <td><img src="Images/ages-impacts-on-Player-Efficiency-Rating(PER).png" width=300></td>
+    <td><img src="Images/ages-impacts-on-Player-Efficiency-Rating(PER).png" width=270></td>
   </tr>
 </table>  
 
@@ -99,18 +102,18 @@ Notes: Limiting our project between 1986-2017.
 
 ### Setup
 Required dependencies:  
-import pandas as pd
-import matplotlib.pyplot as plt
-import numpy as np
-import scipy.stats as stats
+* import pandas as pd
+* import matplotlib.pyplot as plt
+* import numpy as np
+* import scipy.stats as stats
 
 ### Team
 Created by 
-[@jaybdhruv](https://github.com/) 
-[@MondragB](https://github.com/) 
-[@sammyschapps87](https://github.com/) 
-[@DennisPSmith5676](https://github.com/) 
-[@Kate-Yayla](https://github.com/) 
+* [@jaybdhruv](https://github.com/) 
+* [@MondragB](https://github.com/) 
+* [@sammyschapps87](https://github.com/) 
+* [@DennisPSmith5676](https://github.com/) 
+* [@Kate-Yayla](https://github.com/) 
 
 
 
