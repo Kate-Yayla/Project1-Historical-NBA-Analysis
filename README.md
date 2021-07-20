@@ -51,13 +51,13 @@ Notes: Limiting our project between 1986-2017.
 
 ### Preview of the NBA data set
 
-![Preview of our Data](Images/playerData.png)
+![Preview of our Data](Images/playerData.PNG)
 
 ## Data Cleaning
 
-* **complete_nba_data**: Merged team_Data and cross_ref csv files to work on first question and related visualizations and arranged the data between 1986 to 2017 and cleaned up player_Data and merged with the combined_team_data. 
+* **complete_nba_data**: Merged team_Data and cross_ref csv files to work on first question and related visualizations and arranged the data between 1986 to 2017 and cleaned up player_Data and merged with the combined_team_data.
 
-* **age_player_data**: Create a dataframe using complete_nba_data  to find age effects PER (Player Efficiency Rating. Gathered the vehicle data from complete_nba_data and use "Year", "Player", "Age", "G", "MP","PER" as column. 
+* **age_player_data**: Create a dataframe using complete_nba_data  to find age effects PER (Player Efficiency Rating. Gathered the vehicle data from complete_nba_data and use "Year", "Player", "Age", "G", "MP","PER" as column.
 
 ## Data Visualization
 
@@ -69,13 +69,13 @@ Notes: Limiting our project between 1986-2017.
 
 ## Visualized four factors ratings impacts on winning percentage.
 
-![Winning Percentage](Images/Impact-Four-Factor-Ratings-on-Winning-Percentage.png)
+![Winning Percentage](Images/Impact-Four-Factor-Ratings-on-Winning-Percentage.PNG)
 
 * There is a positive correlation with Four Factors Ratings Air and Winning Percentage.
 
 ## Visualized ages impacts on Player Efficiency Rating (PER)
 
-![Player Efficieny](Images/ages-impacts-on-player-Efficiency-Rating(PER).png)
+![Player Efficieny](Images/ages-impacts-on-player-Efficiency-Rating(PER).PNG)
 
 * There is a slightly positive correlation with ages and Player Efficiency Rating (PER).
 
