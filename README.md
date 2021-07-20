@@ -75,7 +75,7 @@ Notes: Limiting our project between 1986-2017.
 
 ## Visualized ages impacts on Player Efficiency Rating (PER)
 
-![Player Efficieny](/Images/ages-impacts-on-player-Efficiency-Rating(PER).PNG)
+![Player Efficieny](Images/ages-impacts-on-Player-Efficiency-Rating(PER).PNG)
 
 * There is a slightly positive correlation with ages and Player Efficiency Rating (PER).
 
