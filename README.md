@@ -17,7 +17,7 @@
 
 ## General info
 
-In this project, we analyzed the NBA history with the parameters of players age, the winning percentage of teams, PER (players efficieny rating), minutes played between 1986-2017 and used Python juyter notebook for creating codes. 
+In this project, we analyzed the NBA history with the parameters of players age, the winning percentage of teams, PER (players efficieny rating), minutes played between 1986-2017 and used Python juyter notebook for creating codes.
 
 ## Questions
 
@@ -35,7 +35,6 @@ In this project, we analyzed the NBA history with the parameters of players age,
 |Players Move | New Teams winning percenatge
 |Players Performance | Time
 
-
 ## Data Sources
 
 ### Four factors contribution to NBA Teams success
@@ -48,7 +47,6 @@ In this project, we analyzed the NBA history with the parameters of players age,
 
 * (https://www.sportsgamblingpodcast.com/2020/04/20/nba-most-valuable-statistic/)
 * (https://pypi.org/project/nba-api/)
-  
 Notes: Limiting our project between 1986-2017.
 
 ### Preview of the NBA data set
@@ -71,15 +69,15 @@ Notes: Limiting our project between 1986-2017.
 
 ## Visualized four factors ratings impacts on winning percentage.
 
-![Winning Percentage](/Images/Impact-Four-Factor-Ratings-on-Winning-Percentage.png)
+![Winning Percentage](./Images/Impact-Four-Factor-Ratings-on-Winning-Percentage.png)
 
 * There is a positive correlation with Four Factors Ratings Air and Winning Percentage.
 
 ## Visualized ages impacts on Player Efficiency Rating (PER)
 
-![Player Efficieny](/Images/ages-impacts-on-player-Efficiency-Rating(PER).png)
+![Player Efficieny](./Images/ages-impacts-on-player-Efficiency-Rating(PER).png)
 
-* There is a slightly positive correlation with ages and Player Efficiency Rating (PER) 
+* There is a slightly positive correlation with ages and Player Efficiency Rating (PER).
 
 ### Setup
 
@@ -95,7 +93,9 @@ import scipy.stats as stats
 ### Team
 
 Created by:
+
 * [@jaybdhruv](https://github.com/)
+
 * [@MondragB](https://github.com/MondragB)
 * [@sammyschapps87](https://github.com/)
 * [@DennisPSmith5676](https://github.com/)
