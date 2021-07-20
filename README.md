@@ -51,7 +51,7 @@ Notes: Limiting our project between 1986-2017.
 
 ### Preview of the NBA data set
 
-![Preview of our Data](/Images/playerData.png)
+![Preview of our Data](Images/playerData.png)
 
 ## Data Cleaning
 
@@ -69,13 +69,13 @@ Notes: Limiting our project between 1986-2017.
 
 ## Visualized four factors ratings impacts on winning percentage.
 
-![Winning Percentage](./Images/Impact-Four-Factor-Ratings-on-Winning-Percentage.png)
+![Winning Percentage](Images/Impact-Four-Factor-Ratings-on-Winning-Percentage.png)
 
 * There is a positive correlation with Four Factors Ratings Air and Winning Percentage.
 
 ## Visualized ages impacts on Player Efficiency Rating (PER)
 
-![Player Efficieny](./Images/ages-impacts-on-player-Efficiency-Rating(PER).png)
+![Player Efficieny](Images/ages-impacts-on-player-Efficiency-Rating(PER).png)
 
 * There is a slightly positive correlation with ages and Player Efficiency Rating (PER).
 
