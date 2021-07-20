@@ -32,7 +32,7 @@ In this project, we analyzed the NBA history with the parameters of players age,
 | --------- | -------- |
 |Four Factors | Team win/success
 |Age | Players Efficiency Ratings (PER)
-|Players Move | New Teams winning percenatge
+|Players Move | New Teams winning percentage
 |Players Performance | Time
 
 ## Data Sources
@@ -71,7 +71,7 @@ Notes: Limiting our project between 1986-2017.
 
 ![Winning Percentage](/Images/Impact-Four-Factor-Ratings-on-Winning-Percentage.PNG)
 
-* There is a positive correlation with Four Factors Ratings Air and Winning Percentage.
+* There is a positive correlation with Four Factors Ratings and Winning Percentage.
 
 ## Visualized ages impacts on Player Efficiency Rating (PER)
 
