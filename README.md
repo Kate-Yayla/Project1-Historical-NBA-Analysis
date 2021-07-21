@@ -61,7 +61,7 @@ Notes: Limiting our project between 1986-2017.
 
 
 ### Cleaned NBA data set
-![Cleaned Data](/Images/cleaneddata.PNG)
+![Cleaned Data](/Images/Cleaneddata.PNG)
 
 ## Data Visualization
 
