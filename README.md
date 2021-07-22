@@ -51,7 +51,7 @@ In this project, we analyzed the NBA history with the parameters of players age,
 
 ### Preview of the NBA data set
 
-![Preview Data](/Visualizations/playerData.PNG)
+![Preview Data](/Visualizations/previewdata.PNG)
 
 ## Data Cleaning
 
@@ -77,6 +77,23 @@ In this project, we analyzed the NBA history with the parameters of players age,
 
 ### Analysis of Impact of Four Factors Ratings on Team's Winning Percentage
 
+<<<<<<< HEAD
+![Correlation of Effective Field Goal and Winning Percentage](/Visualizations/EFG-WP.jpg)
+
+![Coefficient eFG](/Visualizations/Coff-EFG-WP.PNG)
+
+![Correlation of Tunrover Rate and Winning Percentage](/Visualizations/TR-WP.jpg)
+
+![Coefficient TOV](/Visualizations/coff-TR-WP.PNG)
+
+![Correlation of Offensive Rebound and Winning Percentage](/Visualizations/OR-WP.jpg)
+
+![Coefficient ORB](/Visualizations/Coff-OR-WP.PNG)
+
+![Correlation of Free Throw Rate and Winning Percentage](/Visualizations/FT-WP.jpg)
+
+![Coefficient FT](/Visualizations/Coff-FTR-WP.PNG)
+=======
 ![Reports](Visualizations\EffectiveFieldGoal.jpg)
 
 ![Reports](Visualizations\CoefficienteFG.jpg)
@@ -92,14 +109,21 @@ In this project, we analyzed the NBA history with the parameters of players age,
 ![Reports](Visualizations\FreeThrowRate.jpg)
 
 ![Reports](Visualizations\CoefficientFT.jpg)
+>>>>>>> c2779958ac2f43d2901661ad53c9b71b680790c0
 
 We understand from these scatter plots that individual factors have a very weak correlation with the winning percentage as Coefficient of Correlation (r) is very low in all the cases.
 
 Hence, we then perform linear regression on the Four Factor Rating to see if we get better correlation to Team’s winning percentage compared to individual factors.
 
+<<<<<<< HEAD
+![Correlation-FourFactorRating-WinningPercentage](/Visualizations/FFR-WP.jpg)
+
+![Coefficient Four Factor Ratings](/Visualizations/COFF-FFR-WP.PNG)
+=======
 ![Reports](Visualizations\FourFactorRating.jpg)
 
 ![Reports](Visualizations\Coefficient4FF.jpg)
+>>>>>>> c2779958ac2f43d2901661ad53c9b71b680790c0
 
 From Scatter Plot and Linear Regression analysis, we can observe that Four Factor Rating has a better correlation to the team’s winning percentage than individual factors. 
 
@@ -111,7 +135,11 @@ r is 0.377 in this case which indicates that it is a weak positive correlation. 
 
 We calculate residuals which are difference between predicted winning percentages and observed winning percentages. Residuals are essentially errors in our predictions. A positive residual indicates that our prediction was lower than expected while negative residual indicates that our prediction was higher than expected.
 
+<<<<<<< HEAD
+![Residual vs Predicted values](/Visualizations/Res-Pre.jpg)
+=======
 ![Reports](Visualizations\Residuals.jpg)
+>>>>>>> c2779958ac2f43d2901661ad53c9b71b680790c0
 
 We then plot a scatter plot of predicted values against residuals to check for the pattern. If we get any kind of pattern in this scatter plot, it means that we can predict our residual based on our predicted values. This means that our data model is not accurate, and it will require some transformation of the data.
 
@@ -119,7 +147,11 @@ From this Scatter plot, we can see that slope is 0 and linear regression is a ho
 
 ### Analysis of  Player's age affecting his PER (Player Efficiency Rating)? 
 
+<<<<<<< HEAD
+![Correlation of Age and PER](/Visualizations/Correlation-Age-PER.jpg)
+=======
 ![Reports](Visualizations\AgePER.jpg)
+>>>>>>> c2779958ac2f43d2901661ad53c9b71b680790c0
 
 From this scatter plot and the value of r, we can conclude that there is a very weak positive correlation between Age and PER. **This is not a sufficient data to predict that age of the player affects his PER.**
 
