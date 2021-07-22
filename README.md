@@ -24,7 +24,7 @@ In this project, we analyzed the NBA history with the parameters of players age,
 1. Can the Team Four Factor Rating of Basketball help in accurately determining the team’s winning percentage? Does the data set we are using needs to be adjusted for accurate analysis?
 2. How does age of the player affect PER (Player Efficiency Rating)?
 3. How does a player’s move (Top 10 only based on overall points) affect the new team’s winning percentage?
-4. How to find top 50 or 100 players and their performance based on minutes played?
+4. Is the Minutes Played variable positively correlated with a players core performance variables? (i.e: 3pts, 2pts, blocks, steals, ect.)
 
 ## Parameters
 
@@ -33,7 +33,7 @@ In this project, we analyzed the NBA history with the parameters of players age,
 |Four Factors Ratings | Team's winning percentage
 |Age | Players Efficiency Ratings (PER)
 |Player's Move | New Team's winning percentage
-|Player's Performance | Time
+|Minutes Played | 3pts, 2pt, Stl, Blk, Drb, Orb, Ft
 
 ## Data Sources
 
@@ -71,6 +71,7 @@ In this project, we analyzed the NBA history with the parameters of players age,
 * **Impact of age based on PER**: Analyzed players age data and found the quartiles, IQR, upper and lower bound to compare the players who would be on top 10 based on players median. 
 
 * **Impact of players move based on points**: Analyzed players move based on points and winning percentage using player_points_data. Found top 10 players based on points and impact of their move to other team.
+* **Impact of minutes played on key varibles**: Took the natural log of all varibles in order to see elasticity through regression analysis. 
 
 ## Visualized four factors ratings impacts on winning percentage
 
@@ -97,6 +98,10 @@ In this project, we analyzed the NBA history with the parameters of players age,
 ### Tracy McGrady Team Changes
 
 <img src="Visualizations/tmcg%20changes.png" alt="drawing" width="500"/>
+
+### Impact of Minutes Played on Key Variables
+
+<img src=" " 
 
 ### Reports
 
