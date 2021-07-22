@@ -66,68 +66,100 @@ In this project, we analyzed the NBA history with the parameters of players age,
 
 ## Data Visualization
 
-* **Impact of Four Factor Ratings on Winning Percentage**: Analyzed the impact of four factor ratings against the winning percentage and plot both parameters. Analyzed 2017 Team performance based on four factors compare with our prediction with actual winning percentage and found Difference in Winning Percentages.Statistical Analysis and table done on the resulting data.
+* **Impact of Four Factor Ratings on Winning Percentage**: Analyzed the impact of Four Factor ratings on team's Winning Percentage by performing linear regression and scatter plot. We also calculated Coefficient of Correlation (r) to see how Four Factors and Team's winning percentage are correlated. We calculated residuals and plotted residuals with predicted values to see if the data that we are working on needs adjustment or not.
 
 * **Impact of age based on PER**: Analyzed players age data and found the quartiles, IQR, upper and lower bound to compare the players who would be on top 10 based on players median. 
 
 * **Impact of players move based on points**: Analyzed players move based on points and winning percentage using player_points_data. Found top 10 players based on points and impact of their move to other team.
 * **Impact of minutes played on key varibles**: Took the natural log of all varibles in order to see elasticity through regression analysis. 
 
-## Visualized four factors ratings impacts on winning percentage
+## Reports
 
-![Winning Percentage](/Visualizations/Correlation-FourFactorRating-WinningPercentage.jpg)
+### Analysis of Impact of Four Factors Ratings on Team's Winning Percentage
 
-* There is a positive correlation with Four Factors Ratings and Winning Percentage.
+![Correlation of Effective Field Goal and Winning Percentage](C:\Jay\DSB\Project1-Historical-NBA-Analysis\Visualizations\Correlation of Effective Field Goal and Winning Percentage.jpg)
 
-## Visualized ages impacts on Player Efficiency Rating (PER)
+![Coefficient eFG](C:\Users\Jay D\Downloads\Coefficient eFG.jpg)
 
-![Player Efficieny](/Visualizations/Correlation-Age-PER.jpg)
+![Correlation of Tunrover Rate and Winning Percentage](C:\Jay\DSB\Project1-Historical-NBA-Analysis\Visualizations\Correlation of Tunrover Rate and Winning Percentage.jpg)
 
-* There is a slightly positive correlation with ages and Player Efficiency Rating (PER).
+![Coefficient TOV](C:\Users\Jay D\Downloads\Coefficient TOV.jpg)
 
-## Visualized Player Changing Teams (Top 10)
+![Correlation of Offensive Rebound and Winning Percentage](C:\Jay\DSB\Project1-Historical-NBA-Analysis\Visualizations\Correlation of Offensive Rebound and Winning Percentage.jpg)
 
-### Top 10 Players
+![Coefficient ORB](C:\Users\Jay D\Downloads\Coefficient ORB.jpg)
+
+![Correlation of Free Throw Rate and Winning Percentage](C:\Jay\DSB\Project1-Historical-NBA-Analysis\Visualizations\Correlation of Free Throw Rate and Winning Percentage.jpg)
+
+![Coefficient FT](C:\Users\Jay D\Downloads\Coefficient FT.jpg)
+
+We understand from these scatter plots that individual factors have a very weak correlation with the winning percentage as Coefficient of Correlation (r) is very low in all the cases.
+
+Hence, we then perform linear regression on the Four Factor Rating to see if we get better correlation to Team’s winning percentage compared to individual factors.
+
+![Correlation-FourFactorRating-WinningPercentage](C:\Jay\DSB\Project1-Historical-NBA-Analysis\Visualizations\Correlation-FourFactorRating-WinningPercentage.jpg)
+
+![Coefficient Four Factor Ratings](C:\Users\Jay D\Downloads\Coefficient Four Factor Ratings.jpg)
+
+From Scatter Plot and Linear Regression analysis, we can observe that Four Factor Rating has a better correlation to the team’s winning percentage than individual factors. 
+
+For a healthy positive correlation, it is important to have Coefficient of Correlation (r) = 0.9. 
+
+r is 0.377 in this case which indicates that it is a weak positive correlation. **This indicates that Four Factor Rating is not an efficient parameter in determining the winning percentage of the team. There are several other external factors that needs to consider to accurately predict the winning percentage.**
+
+### To check if data set we are using needs to be adjusted for accurate analysis
+
+We calculate residuals which are difference between predicted winning percentages and observed winning percentages. Residuals are essentially errors in our predictions. A positive residual indicates that our prediction was lower than expected while negative residual indicates that our prediction was higher than expected.
+
+![Residual vs Predicted values](C:\Jay\DSB\Project1-Historical-NBA-Analysis\Visualizations\Residual vs Predicted values.jpg)
+
+We then plot a scatter plot of predicted values against residuals to check for the pattern. If we get any kind of pattern in this scatter plot, it means that we can predict our residual based on our predicted values. This means that our data model is not accurate, and it will require some transformation of the data.
+
+From this Scatter plot, we can see that slope is 0 and linear regression is a horizontal line. This means that there is no correlation in the predicted values and residuals. **The occurrences or residuals are in a randomized order. This concludes that the data model we were working is an accurate data model.**
+
+### Analysis of  Player's age affecting his PER (Player Efficiency Rating)? 
+
+<img src="C:\Users\Jay D\Downloads\Age PER correlation.jpg" alt="Age PER correlation" style="zoom:80%;" />
+
+From this scatter plot and the value of r, we can conclude that there is a very weak positive correlation between Age and PER. **This is not a sufficient data to predict that age of the player affects his PER.**
+
+But we can see it here that more datapoints are recorded between the age 20 and 30 and a very few datapoints are recorded after the age of 30. This also infers a player’s PER will reach a peak between these years.
+
+### Analysis of Player's move affecting the winning percentage of his new team
+
+#### Top 10 Players (Based on Points)
 
 <img src="Visualizations\top%2010.png" alt="drawing" width="500"/>
 
-### Tracy McGrady Teams
+#### Tracy McGrady Teams
 
 <img src="Visualizations/tmcg%20teams.png" alt="drawing" width="500"/>
 
-### Tracy McGrady Team Changes
+#### Tracy McGrady Team Changes
 
 <img src="Visualizations/tmcg%20changes.png" alt="drawing" width="500"/>
-
-### Impact of Minutes Played on Key Variables
-
-<img src=" " 
-
-### Reports
-
-##### Observations Question 3 – How does a Player&#39;s move to a new team effect the winning Percentage of the New Team. Using just the top 10 unique points leaders for the 1986-2017 season.
 
 1. Our expectation would be the new team would improve.
    * In most cases that is exactly what happen.
    * In the cases they did not, some of the players like Tracy McGrady were traded / moved several times in a year and his teams did not improve.
-   * The Top 10 had 2 players Kobe Bryant andRussell Westbrook that did not move if we had more time, we could have replaced them with the next best player that had a move. This would have help in verifying the outcome to back up out Theroy.
-   * The Top 10 had 1 player Kevin Durant that did had a move to a brand new team OKC. This caused a bug that if we had more time we would have fixed, Due to OKC being a new team we had not data on new team. The query should have returned only on Team change with a Message that This is a New Team and no winning Percentage was found. The code displays the current year data for the new team instead.
+   * The Top 10 had 2 players Kobe Bryant and Russell Westbrook that did not move. If we had more time, we could have replaced them with the next best player that had a move. This would have help in verifying the outcome to back up out Theory.
+   * The Top 10 had 1 player Kevin Durant that did had a move to a brand new team OKC. This caused a bug that if we had more time we would have fixed, Due to OKC being a new team we had no data on new team's previous winning percentage. The query should have returned only on Team change with a message that "This is a New Team and no winning Percentage was found". The code displays the current year data for the new team instead.
    * The Top 10 had 2 players Alex English and Dwayne Wade that did not have a positive outcome. When they went to the new team they were both at the end of their careers.
    * The Top 10 had 1 player Dominique Wilkins that had mixed results. He was on 2 different teams in 1994 he was traded from and to the same team the Atlanta Hawks. He also was traded again at the end of his career to Seattle, and they were an awfully bad team before he got there.
-    
+   
 2. Based on the finding we would need more Data to deal with the outliers.
 3. If we had more time, we could have tried to a line series plot for each player with years on the bottom and age on side.
 4. If we had more time, we could have used Points as well as winning % to see how many more or less points they averaged.
 5. If we had more time, we could of we could have looked at Player Efficiency Rating over that time
 6. If we had more time, we could have used a Confusion Matrix to help Validate the outcome.
-    
+   
   - Here is the process and an example
       - You need a test dataset or a validation dataset with expected outcome values.
       - Make a prediction for each row in your test dataset.
       - From the expected outcomes and predictions count:
       - The number of correct predictions for each class.
       - The number of incorrect predictions for each class, organized by the class that was predicted. ![](RackMultipart20210722-4-197p35x_html_c84638979ef26478.jpg)
-  
+
 ### Setup
 
 Required dependencies:
@@ -144,7 +176,7 @@ import scipy.stats as stats
 Created by:
 
 * [@jaybdhruv](https://github.com/)
-* [@MondragB](https://github.com/MondragB)
-* [@sammyschapps87](https://github.com/)
 * [@DennisPSmith5676](https://github.com/)
 * [@Kate-Yayla](https://github.com/)
+* [@MondragB](https://github.com/MondragB)
+* [@sammyschapps87](https://github.com/)
