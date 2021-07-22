@@ -51,7 +51,7 @@ Notes: Limiting our project between 1986-2017.
 
 ### Preview of the NBA data set
 
-![Preview of our Data](/Images/playerData.PNG)
+![Preview of our Data](/Visualizations/playerData.PNG)
 
 ## Data Cleaning
 
@@ -61,7 +61,8 @@ Notes: Limiting our project between 1986-2017.
 
 
 ### Cleaned NBA data set
-![Cleaned Data](/Images/Cleaneddata.PNG)
+
+![Cleaned Data](/Visualizations/Cleaneddata.PNG)
 
 ## Data Visualization
 
@@ -73,32 +74,31 @@ Notes: Limiting our project between 1986-2017.
 
 ## Visualized four factors ratings impacts on winning percentage
 
-![Winning Percentage](/Images/Impact-Four-Factor-Ratings-on-Winning-Percentage.PNG)
+![Winning Percentage]()
 
 * There is a positive correlation with Four Factors Ratings and Winning Percentage.
 
 ## Visualized ages impacts on Player Efficiency Rating (PER)
 
-![Player Efficieny](Images/ages-impacts-on-Player-Efficiency-Rating(PER).PNG)
+![Player Efficieny]()
 
 * There is a slightly positive correlation with ages and Player Efficiency Rating (PER).
 
 ## Visualized Player Changing Teams (Top 10)
 
 ### Top 10 Players
-http://localhost:8888/notebooks/Project1-Historical-NBA-Analysis/NBA%20Analysis.ipynb#:~:text=Out%5B59%5D%3A-,Year,0.524,-In%C2%A0%5B60%5D%3A
+
+<img src="Visualizations\top%2010.png" alt="drawing" width="500"/>
 
 ### Tracy McGrady Teams
-http://localhost:8888/notebooks/Project1-Historical-NBA-Analysis/NBA%20Analysis.ipynb#:~:text=Out%5B61%5D%3A-,Year,0.606,-In%C2%A0%5B62%5D%3A
+
+<img src="Visualizations/tmcg%20teams.png" alt="drawing" width="500"/>
 
 ### Tracy McGrady Team Changes
-http://localhost:8888/notebooks/Project1-Historical-NBA-Analysis/NBA%20Analysis.ipynb#:~:text=Out%5B63%5D%3A-,Year,0.069,-In%C2%A0%5B55%5D%3A
 
+<img src="Visualizations/tmcg%20changes.png" alt="drawing" width="500"/>
 
 ### Reports
-
-
-
 
 ### Setup
 
