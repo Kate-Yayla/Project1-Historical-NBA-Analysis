@@ -30,7 +30,7 @@ In this project, we analyzed the NBA history with the parameters of players age,
 
 | Parameters | Against |
 | --------- | -------- |
-|Four Factors | Team's winning percentage
+|Four Factors Ratings | Team's winning percentage
 |Age | Players Efficiency Ratings (PER)
 |Player's Move | New Team's winning percentage
 |Player's Performance | Time
@@ -51,7 +51,7 @@ In this project, we analyzed the NBA history with the parameters of players age,
 
 ### Preview of the NBA data set
 
-![Preview of our Data](/Visualizations/playerData.PNG)
+![Cleaned Data](/Visualizations/playerData.PNG)
 
 ## Data Cleaning
 
@@ -74,13 +74,13 @@ In this project, we analyzed the NBA history with the parameters of players age,
 
 ## Visualized four factors ratings impacts on winning percentage
 
-![Winning Percentage]()
+![Winning Percentage](/Visualizations/Correlation-FourFactorRating-WinningPercentage.jpg)
 
 * There is a positive correlation with Four Factors Ratings and Winning Percentage.
 
 ## Visualized ages impacts on Player Efficiency Rating (PER)
 
-![Player Efficieny]()
+![Player Efficieny](/Visualizations/Correlation-Age-PER.jpg)
 
 * There is a slightly positive correlation with ages and Player Efficiency Rating (PER).
 
@@ -100,28 +100,29 @@ In this project, we analyzed the NBA history with the parameters of players age,
 
 ### Reports
 
-    # Observations Question 3 – How does a Player&#39;s move to a new team effect the winning Percentage of the New Team. Using just the top 10 unique points leaders for the 1986-2017 season.
+##### Observations Question 3 – How does a Player&#39;s move to a new team effect the winning Percentage of the New Team. Using just the top 10 unique points leaders for the 1986-2017 season.
 
-    1. Our expectation would be the new team would improve.
-      1. In most cases that is exactly what happen.
-      2. In the cases they did not, some of the players like Tracy McGrady were traded / moved several times in a year and his teams did not improve.
-      3. The Top 10 had 2 players Kobe Bryant andRussell Westbrook that did not move if we had more time, we could have replaced them with the next best player that had a move. This would have help in verifying the outcome to back up out Theroy.
-      4. The Top 10 had 1 player Kevin Durant that did had a move to a brand new team OKC. This caused a bug that if we had more time we would have fixed, Due to OKC being a new team we had not data on new team. The query should have returned only on Team change with a Message that This is a New Team and no winning Percentage was found. The code displays the current year data for the new team instead.
-      5. The Top 10 had 2 players Alex English and Dwayne Wade that did not have a positive outcome. When they went to the new team they were both at the end of their careers.
-      6. The Top 10 had 1 player Dominique Wilkins that had mixed results. He was on 2 different teams in 1994 he was traded from and to the same team the Atlanta Hawks. He also was traded again at the end of his career to Seattle, and they were an awfully bad team before he got there.
+1. Our expectation would be the new team would improve.
+   * In most cases that is exactly what happen.
+   * In the cases they did not, some of the players like Tracy McGrady were traded / moved several times in a year and his teams did not improve.
+   * The Top 10 had 2 players Kobe Bryant andRussell Westbrook that did not move if we had more time, we could have replaced them with the next best player that had a move. This would have help in verifying the outcome to back up out Theroy.
+   * The Top 10 had 1 player Kevin Durant that did had a move to a brand new team OKC. This caused a bug that if we had more time we would have fixed, Due to OKC being a new team we had not data on new team. The query should have returned only on Team change with a Message that This is a New Team and no winning Percentage was found. The code displays the current year data for the new team instead.
+   * The Top 10 had 2 players Alex English and Dwayne Wade that did not have a positive outcome. When they went to the new team they were both at the end of their careers.
+   * The Top 10 had 1 player Dominique Wilkins that had mixed results. He was on 2 different teams in 1994 he was traded from and to the same team the Atlanta Hawks. He also was traded again at the end of his career to Seattle, and they were an awfully bad team before he got there.
     
-    1. Based on the finding we would need more Data to deal with the outliers.
-    2. If we had more time, we could have tried to a line series plot for each player with years on the bottom and age on side.
-    3. If we had more time, we could have used Points as well as winning % to see how many more or less points they averaged.
-    4. If we had more time, we could of we could have looked at Player Efficiency Rating over that time
-    5. If we had more time, we could have used a Confusion Matrix to help Validate the outcome.
+2. Based on the finding we would need more Data to deal with the outliers.
+3. If we had more time, we could have tried to a line series plot for each player with years on the bottom and age on side.
+4. If we had more time, we could have used Points as well as winning % to see how many more or less points they averaged.
+5. If we had more time, we could of we could have looked at Player Efficiency Rating over that time
+6. If we had more time, we could have used a Confusion Matrix to help Validate the outcome.
     
-        - Here is the process and an example
+  - Here is the process and an example
       - You need a test dataset or a validation dataset with expected outcome values.
       - Make a prediction for each row in your test dataset.
       - From the expected outcomes and predictions count:
       - The number of correct predictions for each class.
       - The number of incorrect predictions for each class, organized by the class that was predicted. ![](RackMultipart20210722-4-197p35x_html_c84638979ef26478.jpg)
+  
 ### Setup
 
 Required dependencies:
