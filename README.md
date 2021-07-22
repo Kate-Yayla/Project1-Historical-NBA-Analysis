@@ -21,7 +21,7 @@ In this project, we analyzed the NBA history with the parameters of players age,
 
 ## Questions
 
-1. Can the Team Four Factor Rating of Basketball help in accurately determining the team’s win/success?
+1. Can the Team Four Factor Rating of Basketball help in accurately determining the team’s winning percentage? Does the data set we are using needs to be adjusted for accurate analysis?
 2. How does age of the player affect PER (Player Efficiency Rating)?
 3. How does a player’s move (Top 10 only based on overall points) affect the new team’s winning percentage?
 4. How to find top 50 or 100 players and their performance based on minutes played?
@@ -30,9 +30,9 @@ In this project, we analyzed the NBA history with the parameters of players age,
 
 | Parameters | Against |
 | --------- | -------- |
-|Four Factors | Team win/success
+|Four Factors | Team's winning percentage
 |Age | Players Efficiency Ratings (PER)
-|Player's Move | New Teams winning percentage
+|Player's Move | New Team's winning percentage
 |Player's Performance | Time
 
 ## Data Sources
