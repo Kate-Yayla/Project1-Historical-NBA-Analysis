@@ -93,22 +93,6 @@ In this project, we analyzed the NBA history with the parameters of players age,
 
 ![Coefficient FT](/Visualizations/Coff-FTR-WP.PNG)
 
-![Reports](Visualizations\EffectiveFieldGoal.jpg)
-
-![Reports](Visualizations\CoefficienteFG.jpg)
-
-![Reports](Visualizations\TunroverRate.jpg)
-
-![Reports](Visualizations\CoefficientTOV.jpg)
-
-![Reports](Visualizations\OffensiveRebound.jpg)
-
-![Reports](Visualizations\CoefficientORB.jpg)
-
-![Reports](Visualizations\FreeThrowRate.jpg)
-
-![Reports](Visualizations\CoefficientFT.jpg)
-
 We understand from these scatter plots that individual factors have a very weak correlation with the winning percentage as Coefficient of Correlation (r) is very low in all the cases.
 
 Hence, we then perform linear regression on the Four Factor Rating to see if we get better correlation to Team’s winning percentage compared to individual factors.
