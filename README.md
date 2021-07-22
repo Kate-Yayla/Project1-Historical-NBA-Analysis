@@ -77,29 +77,29 @@ In this project, we analyzed the NBA history with the parameters of players age,
 
 ### Analysis of Impact of Four Factors Ratings on Team's Winning Percentage
 
-![Correlation of Effective Field Goal and Winning Percentage](C:\Jay\DSB\Project1-Historical-NBA-Analysis\Visualizations\Correlation of Effective Field Goal and Winning Percentage.jpg)
+![Reports](Visualizations\EffectiveFieldGoal.jpg)
 
-![Coefficient eFG](C:\Users\Jay D\Downloads\Coefficient eFG.jpg)
+![Reports](Visualizations\CoefficienteFG.jpg)
 
-![Correlation of Tunrover Rate and Winning Percentage](C:\Jay\DSB\Project1-Historical-NBA-Analysis\Visualizations\Correlation of Tunrover Rate and Winning Percentage.jpg)
+![Reports](Visualizations\TunroverRate.jpg)
 
-![Coefficient TOV](C:\Users\Jay D\Downloads\Coefficient TOV.jpg)
+![Reports](Visualizations\CoefficientTOV.jpg)
 
-![Correlation of Offensive Rebound and Winning Percentage](C:\Jay\DSB\Project1-Historical-NBA-Analysis\Visualizations\Correlation of Offensive Rebound and Winning Percentage.jpg)
+![Reports](Visualizations\OffensiveRebound.jpg)
 
-![Coefficient ORB](C:\Users\Jay D\Downloads\Coefficient ORB.jpg)
+![Reports](Visualizations\CoefficientORB.jpg)
 
-![Correlation of Free Throw Rate and Winning Percentage](C:\Jay\DSB\Project1-Historical-NBA-Analysis\Visualizations\Correlation of Free Throw Rate and Winning Percentage.jpg)
+![Reports](Visualizations\FreeThrowRate.jpg)
 
-![Coefficient FT](C:\Users\Jay D\Downloads\Coefficient FT.jpg)
+![Reports](Visualizations\CoefficientFT.jpg)
 
 We understand from these scatter plots that individual factors have a very weak correlation with the winning percentage as Coefficient of Correlation (r) is very low in all the cases.
 
 Hence, we then perform linear regression on the Four Factor Rating to see if we get better correlation to Team’s winning percentage compared to individual factors.
 
-![Correlation-FourFactorRating-WinningPercentage](C:\Jay\DSB\Project1-Historical-NBA-Analysis\Visualizations\Correlation-FourFactorRating-WinningPercentage.jpg)
+![Reports](Visualizations\FourFactorRating.jpg)
 
-![Coefficient Four Factor Ratings](C:\Users\Jay D\Downloads\Coefficient Four Factor Ratings.jpg)
+![Reports](Visualizations\Coefficient4FF.jpg)
 
 From Scatter Plot and Linear Regression analysis, we can observe that Four Factor Rating has a better correlation to the team’s winning percentage than individual factors. 
 
@@ -111,7 +111,7 @@ r is 0.377 in this case which indicates that it is a weak positive correlation. 
 
 We calculate residuals which are difference between predicted winning percentages and observed winning percentages. Residuals are essentially errors in our predictions. A positive residual indicates that our prediction was lower than expected while negative residual indicates that our prediction was higher than expected.
 
-![Residual vs Predicted values](C:\Jay\DSB\Project1-Historical-NBA-Analysis\Visualizations\Residual vs Predicted values.jpg)
+![Reports](Visualizations\Residuals.jpg)
 
 We then plot a scatter plot of predicted values against residuals to check for the pattern. If we get any kind of pattern in this scatter plot, it means that we can predict our residual based on our predicted values. This means that our data model is not accurate, and it will require some transformation of the data.
 
@@ -119,7 +119,7 @@ From this Scatter plot, we can see that slope is 0 and linear regression is a ho
 
 ### Analysis of  Player's age affecting his PER (Player Efficiency Rating)? 
 
-<img src="C:\Users\Jay D\Downloads\Age PER correlation.jpg" alt="Age PER correlation" style="zoom:80%;" />
+![Reports](Visualizations\AgePER.jpg)
 
 From this scatter plot and the value of r, we can conclude that there is a very weak positive correlation between Age and PER. **This is not a sufficient data to predict that age of the player affects his PER.**
 
