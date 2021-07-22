@@ -83,6 +83,18 @@ Notes: Limiting our project between 1986-2017.
 
 * There is a slightly positive correlation with ages and Player Efficiency Rating (PER).
 
+## Visualized Player Changing Teams (Top 10)
+
+### Top 10 Players
+http://localhost:8888/notebooks/Project1-Historical-NBA-Analysis/NBA%20Analysis.ipynb#:~:text=Out%5B59%5D%3A-,Year,0.524,-In%C2%A0%5B60%5D%3A
+
+### Tracy McGrady Teams
+http://localhost:8888/notebooks/Project1-Historical-NBA-Analysis/NBA%20Analysis.ipynb#:~:text=Out%5B61%5D%3A-,Year,0.606,-In%C2%A0%5B62%5D%3A
+
+### Tracy McGrady Team Changes
+http://localhost:8888/notebooks/Project1-Historical-NBA-Analysis/NBA%20Analysis.ipynb#:~:text=Out%5B63%5D%3A-,Year,0.069,-In%C2%A0%5B55%5D%3A
+
+
 ### Reports
 
 
