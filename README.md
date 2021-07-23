@@ -51,7 +51,7 @@ In this project, we analyzed the NBA history with the parameters of players age,
 
 ### Preview of the NBA data set
 
-![Preview Data](/Visualizations/previewdata.PNG)
+![Preview Data](/Visualizations/previewdata.png)
 
 # Data Cleaning
 
