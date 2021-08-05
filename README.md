@@ -55,10 +55,11 @@ In this project, we analyzed the NBA history with the parameters of players age,
 
 # Data Cleaning
 
-* **complete_nba_data**: Merged team data with city data and added players data in csv files to work on first question and related visualizations and arranged the data between 1986 to 2017 and cleaned up dataset to use as main data.
+* **complete_nba_data**: To get our data in a format that was needed we had to merge teamData (this contains Year,Team,Record,and Winning Percentage information) with playerData this contains YIndex,Year,Player,Pos,Age,Tm,G,GS,MP,PER,TS%,3PAr,FTr,ORB%,DRB%,TRB%,AST%,STL%,BLK%,TOV%,USG%,blanl,OWS,DWS,WS,WS/48,blank2,OBPM,DBPM,BPM,VORP,FG,FGA,FG%,3P,3PA,3P%,2P,2PA,2P%,eFG%,FT,FTA,FT%,ORB,DRB,TRB,AST,STL,BLK,TOV,PF and PTS information). In order to get the winning percentage by Year and Team to the and added players data in csv files to work on first question and related visualizations and arranged the data between 1986 to 2017. In addtion we had to indentify if we had any NaN in our data. The NBA Team Data had many players that had this occur. This was due to the data in those feilds were not calucluated at the time these players played, or the data needed was not avaibale for that time period. We were able to identify that for a 30 year period (1986 - 2017) was clean (had no feilds with NaN)ed up dataset to use as main data.
 
 * **age_player_data**: Create a dataframe using complete_nba_data  to find age effects PER (Player Efficiency Rating). Gathered the data from complete_nba_data and use "Year", "Player", "Age", "G", "MP","PER" as column to find out top players.
 
+* **player_move_data**: Create a dataframe using complete_nba_data  to find age effects PER (Player Efficiency Rating). Gathered the data from complete_nba_data and use "Year", "Player", "Age", "G", "MP","PER" as column to find out top players.
 
 # Cleaned NBA data set
 
