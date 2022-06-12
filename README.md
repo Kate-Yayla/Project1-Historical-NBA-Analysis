@@ -55,12 +55,24 @@ In this project, we analyzed the NBA history with the parameters of players age,
 
 # Data Cleaning
 
+<<<<<<< HEAD
 To get our data in a format that was needed we had to merge teamData (this contains Year,Team,Record,and Winning Percentage information) with playerData this contains YIndex,Year,Player,Pos,Age,Tm,G,GS,MP,PER,TS%,3PAr,FTr,ORB%,DRB%,TRB%,AST%,STL%,BLK%,TOV%,USG%,blanl,OWS,DWS,WS,WS/48,blank2,OBPM,DBPM,BPM,VORP,FG,FGA,FG%,3P,3PA,3P%,2P,2PA,2P%,eFG%,FT,FTA,FT%,ORB,DRB,TRB,AST,STL,BLK,TOV,PF and PTS information - see Feild_Desc.csv in Resources folder). In order to get the winning percentage by Year and Team (teamData) to be combined with the  PlayerData we did some data cleaninsing in Python as well as created the complete_nba_data DB, this file combines that informaion. This is what we used to do  all of our analyisis except for Question 4. In addtion we had to indentify if we had any NaN in our data. The NBA Team Data had many players that had this occur. This was due to the data in those feilds were not calucluated at the time these players played, or the data needed was not avaibale for that time period. We were able to identify that for a 30 year period (1986 - 2017) the data was clean (had no feilds with NaN).
 
 * **complete_nba_data**:Merged team data with city data and added players data in csv files to work on first question and related visualizations and arranged the data between 1986 to 2017 and cleaned up dataset to use as main data.
 
+=======
+To get our data in a format that was needed, we had to merge teamData (contains Year, Team, Record, and Winning Percentage information) with playerData (contains  Index, Year, Player, Pos, Age, Tm, G, GS, MP, PER, TS%, 3PAr, FTr, ORB%, DRB%, TRB%, AST%, STL%, BLK%, TOV%, USG%, blanl, OWS, DWS, WS, WS/48, blank2, OBPM, DBPM, BPM, VORP, FG, FGA, FG%, 3P, 3PA, 3P%, 2P, 2PA, 2P%, eFG%, FT, FTA, FT%, ORB, DRB, TRB, AST, STL, BLK, TOV, PF and PTS) in Resources folder. In order to get the winning percentage by Year and Team (teamData) to be combined with the PlayerData, we did some data cleansing in Python as well as created the complete_nba_data database, this file combines that information. This is what we used to do all of our analysis except for Question 4. In addition, we had to identify if we had any NaN in our data. The NBA Team Data had many players that had this occur. This was due to the data in those fields were not calculated at the time these players played, or the data needed was not available for that time period. We were able to identify that for a 30-year period (1986 - 2017) the data was clean (had no fields with NaN).
 
-* **age_player_data**: Create a dataframe using complete_nba_data  to find age effects PER (Player Efficiency Rating). Gathered the data from complete_nba_data and use "Year", "Player", "Age", "G", "MP","PER" as column to find out top players.
+* **complete_nba_data**: Merged team data with city data and added players data in csv files to work on first question and related visualizations and arranged the data between 1986 to 2017 and cleaned up dataset to use as main data.
+>>>>>>> 01310440b9262b9b02b52b348d26b0e9cd4ba322
+
+
+* **age_player_data**: Create a data frame using complete_nba_data to find age effects PER (Player Efficiency Rating). Gathered the data from complete_nba_data and use "Year", "Player", "Age", "G", "MP","PER" as column to find out top players.
+
+* **player_move_data**: Create a data frame using complete_nba_data to find the effect a players move had on his new team. In order to make sure we only used the best players based on total points for each year (1986-2016). We did several queries to get to this data (see code). In addition we needed to make sure that we were able to capture the New Team and the Year it happened from the output. To do this, we used the team, year and winning percentage information from the output to get the teams winning Percentage for the prior year from the complete_nba_data database (see code). We then compared the prior year to the year the trade happened (see code).
+
+As we compared different players from top 10 players list, we saw some difference between old winning percentage and new winning percentage when player’s team changed. 
+
 
 * **player_move_data**: Create a dataframe using complete_nba_data  to find  the effect a players move had on his new team. In order to make sure we only used the best players based on total points for each year (1986-2016). We did sevral queries to get to this data.(See code) In addtion we needed to make sure that we were able to capture the New Team and the Year it happened from the output. To do this we used the team, year and winning Percentage information from the output to get the teams winning Percentage for the prior year from the complete_nba_data DB.(See code) We then to compare the Prior year to the year the trade happened. (See code)
 
